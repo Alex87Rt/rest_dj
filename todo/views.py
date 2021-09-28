@@ -5,11 +5,11 @@ from todo.serializers import ProjectModelSerializer, TodoModelSerializer
 from rest_framework.pagination import LimitOffsetPagination
 
 
-class ProjectLimitOffsetPagination(LimitOffsetPagination): # по 10 проектов
+class ProjectLimitOffsetPagination(LimitOffsetPagination):
    default_limit = 10
 
-class TodoLimitOffsetPagination(LimitOffsetPagination): # по 20 заметок
-   default_limit = 20
+class TodoLimitOffsetPagination(LimitOffsetPagination):
+   default_limit = 10
 
 
 class ProjectModelViewSet(ModelViewSet):
@@ -36,5 +36,4 @@ class TodoModelViewSet(ModelViewSet):
 
    def delete(self, request, pk=None):
       todo = get_object_or_404(Todo, pk=pk)
-
       todo.delete()
