@@ -2,7 +2,7 @@ from rest_framework import serializers
 from todo.models import Project, Todo
 from userapp.serializers import UserModelSerializer
 
-
+#Serializer
 class ProjectModelSerializer(serializers.ModelSerializer):
     users = UserModelSerializer(many=True)
 
