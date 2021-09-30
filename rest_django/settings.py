@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'userapp',
     'todo',
     'drf_yasg',
+    'graphene_django',
 ]
 
 MIDDLEWARE = [
@@ -152,3 +153,7 @@ REST_FRAMEWORK = {
 CORS_ALLOWED_ORIGINS = [
    "http://localhost:3000",
 ]
+
+GRAPHENE = {
+    'SCHEMA': 'rest_django.schema.schema',
+}

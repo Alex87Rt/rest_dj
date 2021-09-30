@@ -6,6 +6,7 @@ from todo.views import ProjectModelViewSet, TodoModelViewSet
 from rest_framework.authtoken.views import obtain_auth_token
 from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
+from graphene_django.views import GraphQLView
 
 schema = get_schema_view(
    openapi.Info(
@@ -31,6 +32,7 @@ urlpatterns = [
     path('api/', include(router.urls)),
     path('swagger/', schema.with_ui('swagger', cache_timeout=1), name='schema_swagger'),
     path('redoc/', schema.with_ui('redoc', cache_timeout=1), name='schema_redoc'),
+    path('graphql/', GraphQLView.as_view(graphiql=True)),
 ]
 
 
