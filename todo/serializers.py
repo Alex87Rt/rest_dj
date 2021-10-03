@@ -19,3 +19,13 @@ class TodoModelSerializer(serializers.ModelSerializer):
        model = Todo
        fields = '__all__'
 
+class ProjectModelSerializerVer1(serializers.ModelSerializer):
+    class Meta:
+        model = Project
+        fields = '__all__'
+
+
+class TodoModelSerializerVer1(serializers.ModelSerializer):
+    class Meta:
+       model = Todo
+       fields = '__all__'

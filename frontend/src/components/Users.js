@@ -22,13 +22,13 @@ const UserList = ({users}) => {
    return (
        <table>
            <th>
-               Имя
-           </th>
-           <th>
                Фамилия
            </th>
            <th>
-               Почта
+               Имя
+           </th>
+           <th>
+               Адрес
            </th>
            {users.map((user) => <UserItem user={user} />)}
        </table>
